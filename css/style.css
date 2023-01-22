@@ -1,0 +1,587 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Poppins:wght@400;600;700&display=swap");
+:root {
+  --primary-color: #f1f1f1;
+  --secondary-color: #130907;
+  --third-color: #95a0b2;
+  --fourth-color: #fff;
+  --cardHover-color: rgba(129, 129, 129, 0.541);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #105d66;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #257982;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.container .l-div {
+  width: fit-content;
+  text-align: right;
+}
+
+.container .r-div {
+  width: 70%;
+}
+
+.l-div .header-div {
+  color: var(--secondary-color);
+  font-size: 24px;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contain-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+/*Start Style Section Nav  */
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-bottom: 1px solid gray;
+  z-index: 999;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .container .logo {
+  width: 67px;
+  color: #000;
+}
+
+nav .container ul li {
+  list-style: none;
+}
+nav .container ul li a {
+  padding: 0 20px;
+  color: #000;
+  position: relative;
+}
+.active {
+  border-radius: 3px;
+}
+
+nav .container ul li a:hover::after {
+  content: "";
+  position: absolute;
+  background-color: var(--first-color);
+  height: 2px;
+  width: 30%;
+  right: 32%;
+  top: 26px;
+  transition: 3s;
+}
+nav .container .toggle {
+  display: none;
+}
+/* 
+
+/*End Style Section Nav  */
+
+/*Start Style Section Hero  */
+
+section#hero {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+}
+.contain-container {
+  display: flex;
+  align-items: center;
+}
+
+section#hero .container .content-hero {
+  width: fit-content;
+  font-size: 24px;
+  position: relative;
+}
+
+section#hero .container .content-hero h1 {
+  color: var(--secondary-color);
+}
+section#hero .container .content-hero p {
+  color: #797979;
+  padding: 10px 0;
+}
+
+section#hero .container .content-hero ul {
+  padding: 10px 0;
+  justify-content: space-between;
+  list-style: none;
+  display: flex;
+}
+section#hero .container .content-hero ul li a {
+  color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+
+
+p.text-details {
+	width: 21.5ch;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: cursor 1s step-start infinite, 
+    text 3s steps(18) ;
+}
+
+@keyframes cursor {
+	0%, 100% { 
+    border-color: #212121; 
+  }
+}
+
+@keyframes text {
+	0% { 
+    width: 0; 
+  }
+	100% { 
+    width: 21.5ch; 
+  }
+}
+
+.l-div{
+	white-space: nowrap;
+	overflow: hidden;
+	animation: cursor 8s step-start infinite, 
+    text 3s steps(18) ;
+}
+@keyframes cursor {
+	0%, 100% { 
+    border-color: #212121; 
+  }
+}
+
+@keyframes text {
+	0% { 
+    width: 0; 
+  }
+	100% { 
+    width: 21.5ch; 
+  }
+}
+
+section#hero .container .more .mouse .btnDown{
+  font-size: 20px;
+  border-radius: 50%;
+  rotate: 180deg;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(50%,-50%);
+  border: 1px solid #271d1c ;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+section#hero .container .more .mouse:hover .btnDown{
+  background-color:var(--secondary-color);
+  border-radius: 50%;
+  transition: 1s;
+  color: #e6e6e8;
+}
+section#hero .container .more .arrow {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 10px 0;
+  position: absolute;
+  top: 85%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  font-size: 20px;
+  animation-name: arrow-down;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes arrow-down {
+  to {
+    top: 90%;
+  }
+}
+
+/*End Style Section Hero  */
+
+/*Start Style Section Intro */
+
+section#intro .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section#intro .container .r-div p {
+  padding: 10px 0;
+}
+section#intro .container .r-div .skills {
+  padding: 30px 0;
+}
+section#intro .container .r-div .skills .header {
+  display: flex;
+  justify-content: space-between;
+}
+section#intro .container .r-div .skills .skill {
+  padding: 10px 0;
+}
+section#intro .container .r-div .skills .skill span {
+  color: var(--secondary-color);
+}
+
+section#intro .container .r-div .skills .skill .progress {
+  background-color: #d2e1de;
+  width: 100%;
+  height: 12px;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+section#intro .container .r-div .skills .skill .progress .html {
+  width: 90%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  animation: Animate-HTML 7s infinite;
+
+}
+/* @keyframes Animate-HTML {
+  from {
+  width: 10px;
+}
+to {
+  width: 90%}
+} */
+section#intro .container .r-div .skills .skill .progress .css {
+  width: 85%;
+  height: 100%;
+  background-color: var(--secondary-color);
+
+  border-radius: 15px;
+
+  animation:Animate-CSS 7s infinite;
+
+}
+/* @keyframes Animate-CSS {
+  from {
+  width: 10px;
+}
+to {
+  width: 85%}
+} */
+section#intro .container .r-div .skills .skill .progress .js {
+  width: 80%;
+  height: 100%;
+  background-color: var(--secondary-color);
+
+  border-radius: 15px;
+  animation: Animate-Js 7s infinite;
+
+}
+/* @keyframes Animate-Js {
+  from {
+  width: 10px;
+}
+to {
+  width: 80%}
+} */
+section#intro .container .r-div .skills .skill .progress .bootstrap {
+  width: 87%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  animation: Animate-BootStrap 7s infinite;
+}
+/* @keyframes Animate-BootStrap {
+  from {
+  width: 10px;
+}
+to {
+  width: 87%}
+} */
+/*End Style Section Intro */
+
+/*Start Style Section Experience */
+section {
+  padding: 80px 0;
+}
+section#experience {
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+section#experience .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+section#experience .container .r-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+section#experience .container .card {
+  background-color: rgb(194, 194, 194);
+  padding: 20px;
+  transition: 0.3s;
+  position: relative;
+}
+section#experience .container .card:hover {
+  background-color: var(--secondary-color);
+  color: var(--fourth-color);
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+section#experience .container .card h4,
+.card i {
+  padding: 10px 0;
+}
+
+/*End Style Section Experience */
+
+/*Start Style Section Works */
+
+section#works .container {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 100px 0; */
+}
+
+section#works .container .r-div {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 230px;
+  gap: 10px;
+}
+
+section#works .container .r-div img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section#works .container .r-div .details-one {
+  width: 100%;
+  height: 100%;
+  background-color: var(--cardHover-color);
+  color: var(--secondary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+
+  transform: scale(0);
+}
+
+section#works .container .r-div .first-img {
+  grid-column: span 2;
+  position: relative;
+  object-fit: cover;
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+}
+
+section#works .container .r-div .first-img:hover .details-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+  transition: 0.7s;
+}
+
+section#works .container .r-div .second-image {
+  position: relative;
+}
+section#works .container .r-div .details-second {
+  width: 100%;
+  height: 100%;
+  background-color: var(--cardHover-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  transform: scale(0);
+}
+
+section#works .container .r-div .second-image:hover .details-second {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+  transition: 0.7s;
+}
+
+section#works .container .r-div .three-image {
+  width: 100%;
+  position: relative;
+}
+section#works .container .r-div .details-three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section#works .container .r-div .three-image:hover .details-three {
+  transform: scale(1);
+  background-color: var(--cardHover-color);
+  transition: 0.7s;
+}
+
+section#works .container .r-div .four-image {
+  position: relative;
+}
+
+section#works .container .r-div .details-four {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+}
+
+section#works .container .r-div .four-image:hover .details-four {
+  transform: scale(1);
+  background-color: var(--cardHover-color);
+  transition: 0.7s;
+}
+
+section#works .container .r-div .five-image {
+  position: relative;
+}
+
+section#works .container .r-div .details-five {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+}
+
+section#works .container .r-div .five-image:hover .details-five {
+  transform: scale(1);
+  background-color: var(--cardHover-color);
+  transition: 0.7s;
+}
+
+/*End Style Section Works */
+
+/*Start Style Section Contact */
+
+section#contact {
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 50px 0;
+}
+
+section#contact .container {
+  justify-content: space-between;
+}
+
+section#contact .container .info-contact {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+section#contact .info-contact .info p {
+  color: #000;
+}
+
+section#contact .info-contact .info a {
+  color: #9e9e9e;
+}
+
+/*End Style Section Contact */
+
+/*Start Style Footer */
+
+footer {
+  background-color: #eeebeb;
+  padding: 20px 0;
+  width: 100%;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer h3 {
+  color: var(--secondary-color);
+}
+
+/*End Style Footer */
+
+button.btnUp {
+  display: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--cardHover-color);
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+button.btnUp:hover {
+  background-color: var(--third-color);
+  transition-duration: 4s ease-in-out;
+  cursor: pointer;
+}
