@@ -116,7 +116,7 @@ section#hero {
   height: 100vh;
   display: flex;
   justify-content: space-around;
-  background-image: url(../img/hero.jpg);
+  background-image: url(../img/christopher-gower-m_HRfLhgABo-unsplash.jpg);
   background-size: cover;
 }
 .contain-container {
